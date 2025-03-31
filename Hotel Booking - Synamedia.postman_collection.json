@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "e1e8e565-407c-4379-9051-fe87bb565349",
+		"name": "Hotel Booking - Synamedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9183183"
+	},
+	"item": [
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Rakesh Vishwakarma\",\n  \"email\": \"rakesh8305666@gmail.com\",\n  \"checkIn\": \"2025-04-01\",\n  \"checkOut\": \"2025-04-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/bookings",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/bookings?email=rakesh83056666@gmail.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "rakesh83056666@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ongoing Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/bookings/ongoing-bookings",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings",
+								"ongoing-bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"rakesh830566@gmail.com\",\n  \"roomNumber\": 101\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/bookings/cancel",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Booking",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"rakesh83056666@gmail.com\",\n  \"roomNumber\": 104,\n  \"checkIn\": \"2025-04-01\",\n  \"checkOut\": \"2025-04-04\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/bookings/modify",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rooms",
+			"item": [
+				{
+					"name": "Initialize Dummy Rooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/rooms/init-rooms",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"rooms",
+								"init-rooms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
