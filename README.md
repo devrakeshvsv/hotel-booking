@@ -10,6 +10,29 @@ This is the API for managing hotel bookings, including creating, modifying, canc
 {{BASE_URL}} = http://localhost:3000/api
 ```
 
+## Setup
+
+### 1. Clone the Repository
+
+```sh
+git clone <repository_url>
+cd hotel-booking
+```
+
+### 2. Install Dependencies
+
+```sh
+yarn
+```
+
+### 3. Start the Server
+
+```sh
+yarn start
+```
+
+Ensure that the server is running at `BASE_URL` before making requests.
+
 ## Endpoints
 
 ### 1. Bookings
@@ -78,7 +101,7 @@ To use this API, set up the environment variable:
 
 ## Usage
 
-You can import the Postman collection and test the API using Postman. Ensure the server is running at `BASE_URL` before making requests.
+You can import the Postman collection and test the API using Postman.
 
 ## Author
 
