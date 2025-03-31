@@ -1,72 +1,85 @@
-# Hotel Booking
+# Hotel Booking - Synamedia
 
-Hotel Room Booking System Backend for Synamedia Assessment
-
-Overview
+## Overview
 
 This is the API for managing hotel bookings, including creating, modifying, canceling, and retrieving bookings. It also provides room initialization functionality.
 
-Base URL
+## Base URL
 
+```
 {{BASE_URL}} = http://localhost:3000/api
+```
 
-Endpoints
+## Endpoints
 
-1. Bookings
+### 1. Bookings
 
-Create Booking
-• Endpoint: POST /bookings
-• Request Body:
+#### Create Booking
 
+- **Endpoint:** `POST /bookings`
+- **Request Body:**
+
+```json
 {
-"name": "Rakesh Vishwakarma",
-"email": "rakesh8305666@gmail.com",
-"checkIn": "2025-04-01",
-"checkOut": "2025-04-02"
+  "name": "Rakesh Vishwakarma",
+  "email": "rakesh8305666@gmail.com",
+  "checkIn": "2025-04-01",
+  "checkOut": "2025-04-02"
 }
+```
 
-Get Bookings
-• Endpoint: GET /bookings?email=<email>
-• Query Parameters:
-• email: Email of the user
+#### Get Bookings
 
-Get Ongoing Bookings
-• Endpoint: GET /bookings/ongoing-bookings
+- **Endpoint:** `GET /bookings?email=<email>`
+- **Query Parameters:**
+  - `email`: Email of the user
 
-Cancel Booking
-• Endpoint: PATCH /bookings/cancel
-• Request Body:
+#### Get Ongoing Bookings
 
+- **Endpoint:** `GET /bookings/ongoing-bookings`
+
+#### Cancel Booking
+
+- **Endpoint:** `PATCH /bookings/cancel`
+- **Request Body:**
+
+```json
 {
-"email": "rakesh830566@gmail.com",
-"roomNumber": 101
+  "email": "rakesh830566@gmail.com",
+  "roomNumber": 101
 }
+```
 
-Modify Booking
-• Endpoint: PATCH /bookings/modify
-• Request Body:
+#### Modify Booking
 
+- **Endpoint:** `PATCH /bookings/modify`
+- **Request Body:**
+
+```json
 {
-"email": "rakesh83056666@gmail.com",
-"roomNumber": 104,
-"checkIn": "2025-04-01",
-"checkOut": "2025-04-04"
+  "email": "rakesh83056666@gmail.com",
+  "roomNumber": 104,
+  "checkIn": "2025-04-01",
+  "checkOut": "2025-04-04"
 }
+```
 
-2. Rooms
+### 2. Rooms
 
-Initialize Dummy Rooms
-• Endpoint: POST /rooms/init-rooms
+#### Initialize Dummy Rooms
 
-Environment Variables
+- **Endpoint:** `POST /rooms/init-rooms`
+
+## Environment Variables
 
 To use this API, set up the environment variable:
-• BASE_URL: The base URL of the API.
 
-Usage
+- `BASE_URL`: The base URL of the API.
 
-You can import the Postman collection and test the API using Postman. Ensure the server is running at BASE_URL before making requests.
+## Usage
 
-Author
+You can import the Postman collection and test the API using Postman. Ensure the server is running at `BASE_URL` before making requests.
+
+## Author
 
 Rakesh Vishwakarma
