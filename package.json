@@ -1,0 +1,30 @@
+{
+  "name": "hotel-booking",
+  "version": "1.0.0",
+  "description": "Hotel Room Booking Backend for Synamedia Assessment",
+  "main": "index.js",
+  "repository": "https://github.com/devrakeshvsv/hotel-booking.git",
+  "author": "Rakesh Vishwakarma",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "http-status": "^2.1.0",
+    "joi": "^17.13.3",
+    "mongoose": "^8.13.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
