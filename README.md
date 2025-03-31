@@ -15,7 +15,7 @@ This is the API for managing hotel bookings, including creating, modifying, canc
 ### 1. Clone the Repository
 
 ```sh
-git clone <repository_url>
+git clone https://github.com/devrakeshvsv/hotel-booking
 cd hotel-booking
 ```
 
